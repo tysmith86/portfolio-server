@@ -36019,7 +36019,7 @@
 /* 46 */
 /***/ function(module, exports) {
 
-	module.exports = "<form>\n  <input ng-model=\"$ctrl.title\" placeholder=\"--project title--\">\n  <input ng-model=\"$ctrl.url\" placeholder=\"--site url--\">\n  <input ng-model=\"$ctrl.repo\" placeholder=\"--project repo--\">\n  <input ng-model=\"$ctrl.image\" placeholder=\"--project image--\">\n  <textarea ng-model=\"$ctrl.desc\" placeholder=\"--project descritpion--\" rows=\"3\"></textarea>\n  <button ng-click=\"$ctrl.addNew()\">Upload Project</button>\n</form>\n";
+	module.exports = "<form ng-if=\"false\">\n  <input ng-model=\"$ctrl.title\" placeholder=\"--project title--\">\n  <input ng-model=\"$ctrl.url\" placeholder=\"--site url--\">\n  <input ng-model=\"$ctrl.repo\" placeholder=\"--project repo--\">\n  <input ng-model=\"$ctrl.image\" placeholder=\"--project image--\">\n  <textarea ng-model=\"$ctrl.desc\" placeholder=\"--project descritpion--\" rows=\"3\"></textarea>\n  <button ng-click=\"$ctrl.addNew()\">Upload Project</button>\n</form>\n";
 
 /***/ },
 /* 47 */
