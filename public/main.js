@@ -54,7 +54,7 @@
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	__webpack_require__(53);
+	__webpack_require__(55);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35035,8 +35035,9 @@
 		"./portfolio/bus-mall/bus-mall.js": 33,
 		"./portfolio/chore/chore.js": 37,
 		"./portfolio/lunch/lunch.js": 41,
-		"./portfolio/portfolio.js": 45,
-		"./skills/skills.js": 49
+		"./portfolio/new-project/new-project.js": 45,
+		"./portfolio/portfolio.js": 47,
+		"./skills/skills.js": 51
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -35975,11 +35976,66 @@
 	  value: true
 	});
 	
-	var _portfolio = __webpack_require__(46);
+	var _newProject = __webpack_require__(46);
+	
+	var _newProject2 = _interopRequireDefault(_newProject);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  template: _newProject2.default,
+	  bindings: {
+	    add: '<',
+	    view: '='
+	  },
+	  controller: controller
+	};
+	
+	
+	function controller() {
+	  var _this = this;
+	
+	  this.clearFields = function () {
+	    _this.title = '';
+	    _this.url = '';
+	    _this.repo = '';
+	    _this.image = '';
+	    _this.desc = '';
+	  };
+	
+	  this.addNew = function () {
+	    _this.add({
+	      title: _this.title,
+	      url: _this.url,
+	      repo: _this.repo,
+	      image: _this.image,
+	      desc: _this.desc
+	    });
+	    _this.clearFields();
+	  };
+	};
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	module.exports = "<form>\n  <input ng-model=\"$ctrl.title\" placeholder=\"--project title--\">\n  <input ng-model=\"$ctrl.url\" placeholder=\"--site url--\">\n  <input ng-model=\"$ctrl.repo\" placeholder=\"--project repo--\">\n  <input ng-model=\"$ctrl.image\" placeholder=\"--project image--\">\n  <textarea ng-model=\"$ctrl.desc\" placeholder=\"--project descritpion--\" rows=\"3\"></textarea>\n  <button ng-click=\"$ctrl.addNew()\">Upload Project</button>\n</form>\n";
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _portfolio = __webpack_require__(48);
 	
 	var _portfolio2 = _interopRequireDefault(_portfolio);
 	
-	var _portfolio3 = __webpack_require__(47);
+	var _portfolio3 = __webpack_require__(49);
 	
 	var _portfolio4 = _interopRequireDefault(_portfolio3);
 	
@@ -35991,25 +36047,34 @@
 	  controller: controller
 	};
 	
+	// controller.$inject = ['projectService'];
 	
 	function controller() {
 	  this.styles = _portfolio4.default;
+	
+	  this.add = function (project) {
+	    projectService.add(project).then(function (saved) {
+	      return console.log(saved);
+	    }).catch(function (err) {
+	      return console.error(err);
+	    });
+	  };
 	};
 
 /***/ },
-/* 46 */
+/* 48 */
 /***/ function(module, exports) {
 
-	module.exports = "<section ng-class=\"$ctrl.styles.portfolio\">\n  <h1>Portfolio</h1>\n  <lunch></lunch>\n  <chore></chore>\n  <bus-mall></bus-mall>\n</section>";
+	module.exports = "<section ng-class=\"$ctrl.styles.portfolio\">\n  <h1>Portfolio</h1>\n\n  <new-project add=\"$ctrl.add\"></new-project>\n\n  <lunch></lunch>\n  <chore></chore>\n  <bus-mall></bus-mall>\n</section>";
 
 /***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(50);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(16)(content, {});
@@ -36029,7 +36094,7 @@
 	}
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(15)();
@@ -36045,7 +36110,7 @@
 	};
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36054,11 +36119,11 @@
 	  value: true
 	});
 	
-	var _skills = __webpack_require__(50);
+	var _skills = __webpack_require__(52);
 	
 	var _skills2 = _interopRequireDefault(_skills);
 	
-	var _skills3 = __webpack_require__(51);
+	var _skills3 = __webpack_require__(53);
 	
 	var _skills4 = _interopRequireDefault(_skills3);
 	
@@ -36076,19 +36141,19 @@
 	}
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = "<section ng-class=\"$ctrl.styles.skills\">\n  <h1>Skills</h1>\n  <nav></nav>\n  <div>\n    <h3>Front End</h3>\n      <ul>\n        <li>Html</li>\n        <li>CSS</li>\n        <li>SASS/SCSS</li>\n        <li>Angular</li>\n        <li></li>\n        <li></li>\n      </ul>\n  </div>\n  <div>\n    <h3>Back End</h3>\n      <ul>\n        <li>JavaScript</li>\n        <li>NodeJS</li>\n        <li>Express</li>\n        <li>MongoDB</li>\n        <li>Mongoose</li>\n        <li>Mocha</li>\n        <li>Chai</li>\n      </ul>\n  </div>\n  <div>\n    <h3>Other</h3>\n    <ul>\n      <li>Git</li>\n      <li>Github</li>\n      <li>Webpack</li>\n      <li>Heroku</li>\n    </ul>\n  </div>\n</section>";
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(52);
+	var content = __webpack_require__(54);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(16)(content, {});
@@ -36108,7 +36173,7 @@
 	}
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(15)();
@@ -36124,13 +36189,13 @@
 	};
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(54);
+	var content = __webpack_require__(56);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(16)(content, {});
@@ -36150,7 +36215,7 @@
 	}
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(15)();
