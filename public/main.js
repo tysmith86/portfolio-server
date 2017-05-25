@@ -54,23 +54,24 @@
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	__webpack_require__(55);
+	var _services = __webpack_require__(55);
+	
+	var _services2 = _interopRequireDefault(_services);
+	
+	__webpack_require__(58);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// import uiRouter from 'angular-ui-router';
-	// import defaultRoute from 'angular-ui-router-default';
 	// import http from './http';
 	// import routes from './routes';
 	// import auth from './auth';
 	
-	var app = _angular2.default.module('portfolio', [_components2.default]);
+	var app = _angular2.default.module('portfolio', [_components2.default, _services2.default]);
 	
 	// app.config(http);
 	// app.config(routes);
 	// app.run(auth);
 	
-	// import services from './services';
 	var dev = process.env.API_URL || '/api';
 	
 	app.value('apiUrl', dev);
@@ -35649,7 +35650,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._39l2drYraPP5z4NeopfWbp {\n  background-image: url(\"https://cdn.pixabay.com/photo/2012/12/24/22/18/mount-72366_960_720.jpg\");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  color: white; }\n  ._39l2drYraPP5z4NeopfWbp #headshot {\n    width: 15%;\n    border-radius: 50%; }\n  ._39l2drYraPP5z4NeopfWbp .icon {\n    width: 30px; }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/components/home/src/components/home/home.scss"],"names":[],"mappings":"AAAA;EAGE,gGAA+F;EAC/F,uBAAsB;EACtB,6BAA4B;EAC5B,6BAA4B;EAG5B,aAAY,EAWb;EApBD;IAYI,WAAU;IACV,mBAAkB,EACnB;EAdH;IAiBI,YAAW,EACZ","file":"home.scss","sourcesContent":[":local(.home) {\n\n  // background\n  background-image: url(\"https://cdn.pixabay.com/photo/2012/12/24/22/18/mount-72366_960_720.jpg\");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n\n  // font\n  color: white;\n  \n  #headshot {\n    width: 15%;\n    border-radius: 50%;\n  }\n\n  .icon {\n    width: 30px;\n  }  \n\n}"],"sourceRoot":""}]);
+	exports.push([module.id, "._39l2drYraPP5z4NeopfWbp {\n  background-image: url(\"https://cdn.pixabay.com/photo/2012/12/24/22/18/mount-72366_960_720.jpg\");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n  color: white; }\n  ._39l2drYraPP5z4NeopfWbp #headshot {\n    width: 15%;\n    border-radius: 50%; }\n  ._39l2drYraPP5z4NeopfWbp .icon {\n    width: 30px; }\n  @media screen and (min-resolution: 3dppx) {\n    ._39l2drYraPP5z4NeopfWbp .icon {\n      width: 8%; }\n    ._39l2drYraPP5z4NeopfWbp #headshot {\n      width: 50%; } }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/components/home/src/components/home/home.scss"],"names":[],"mappings":"AAAA;EAGE,gGAA+F;EAC/F,uBAAsB;EACtB,6BAA4B;EAC5B,6BAA4B;EAG5B,aAAY,EAoBb;EA7BD;IAYI,WAAU;IACV,mBAAkB,EACnB;EAdH;IAiBI,YAAW,EACZ;EAED;IApBF;MAsBM,UAAS,EACV;IAvBL;MA0BM,WAAU,EACX,EAAA","file":"home.scss","sourcesContent":[":local(.home) {\n\n  // background\n  background-image: url(\"https://cdn.pixabay.com/photo/2012/12/24/22/18/mount-72366_960_720.jpg\");\n  background-size: cover;\n  background-attachment: fixed;\n  background-repeat: no-repeat;\n\n  // font\n  color: white;\n  \n  #headshot {\n    width: 15%;\n    border-radius: 50%;\n  }\n\n  .icon {\n    width: 30px;\n  }  \n\n  @media screen and (min-resolution: 3dppx) {\n    .icon {\n      width: 8%;\n    }\n\n    #headshot {\n      width: 50%;\n    }\n  }\n}"],"sourceRoot":""}]);
 	
 	// exports
 	exports.locals = {
@@ -35728,7 +35729,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._1v39GbwkP8buNtOHLiJend {\n  padding: 0; }\n  ._1v39GbwkP8buNtOHLiJend a {\n    display: inline-block;\n    border-right: 2px solid white;\n    padding: 5px;\n    text-decoration: none;\n    color: white;\n    padding-left: 0; }\n  ._1v39GbwkP8buNtOHLiJend a:last-child {\n    border: none; }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/components/nav/src/components/nav/nav.scss"],"names":[],"mappings":"AAAA;EACI,WAAU,EAgBb;EAjBD;IAII,sBAAqB;IACrB,8BAA6B;IAC7B,aAAY;IACZ,sBAAqB;IACrB,aAAY;IACZ,gBAAe,EAChB;EAVH;IAaI,aAAY,EACb","file":"nav.scss","sourcesContent":[":local(.nav) {\n    padding: 0;\n\n  a {\n    display: inline-block;\n    border-right: 2px solid white;\n    padding: 5px;\n    text-decoration: none;\n    color: white;\n    padding-left: 0;\n  }\n\n  a:last-child {\n    border: none;\n  }\n\n\n}"],"sourceRoot":""}]);
+	exports.push([module.id, "._1v39GbwkP8buNtOHLiJend {\n  padding: 0; }\n  ._1v39GbwkP8buNtOHLiJend a {\n    display: inline-block;\n    border-right: 2px solid white;\n    padding: 5px;\n    text-decoration: none;\n    color: white;\n    padding-left: 0; }\n  ._1v39GbwkP8buNtOHLiJend a:last-child {\n    border: none; }\n  @media screen and (min-resolution: 3dppx) {\n    ._1v39GbwkP8buNtOHLiJend {\n      font-size: 240%; } }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/components/nav/src/components/nav/nav.scss"],"names":[],"mappings":"AAAA;EACI,WAAU,EAkBb;EAnBD;IAII,sBAAqB;IACrB,8BAA6B;IAC7B,aAAY;IACZ,sBAAqB;IACrB,aAAY;IACZ,gBAAe,EAChB;EAVH;IAaI,aAAY,EACb;EAED;IAhBF;MAiBI,gBAAe,EAElB,EAAA","file":"nav.scss","sourcesContent":[":local(.nav) {\n    padding: 0;\n\n  a {\n    display: inline-block;\n    border-right: 2px solid white;\n    padding: 5px;\n    text-decoration: none;\n    color: white;\n    padding-left: 0;\n  }\n\n  a:last-child {\n    border: none;\n  }\n\n  @media screen and (min-resolution: 3dppx) {\n    font-size: 240%;  \n  }\n}"],"sourceRoot":""}]);
 	
 	// exports
 	exports.locals = {
@@ -36019,7 +36020,7 @@
 /* 46 */
 /***/ function(module, exports) {
 
-	module.exports = "<form ng-if=\"false\">\n  <input ng-model=\"$ctrl.title\" placeholder=\"--project title--\">\n  <input ng-model=\"$ctrl.url\" placeholder=\"--site url--\">\n  <input ng-model=\"$ctrl.repo\" placeholder=\"--project repo--\">\n  <input ng-model=\"$ctrl.image\" placeholder=\"--project image--\">\n  <textarea ng-model=\"$ctrl.desc\" placeholder=\"--project descritpion--\" rows=\"3\"></textarea>\n  <button ng-click=\"$ctrl.addNew()\">Upload Project</button>\n</form>\n";
+	module.exports = "<form>\n  <input ng-model=\"$ctrl.title\" placeholder=\"--project title--\">\n  <input ng-model=\"$ctrl.url\" placeholder=\"--site url--\">\n  <input ng-model=\"$ctrl.repo\" placeholder=\"--project repo--\">\n  <input ng-model=\"$ctrl.image\" placeholder=\"--project image--\">\n  <textarea ng-model=\"$ctrl.desc\" placeholder=\"--project descritpion--\" rows=\"3\"></textarea>\n  <button ng-click=\"$ctrl.addNew()\">Upload Project</button>\n</form>\n";
 
 /***/ },
 /* 47 */
@@ -36047,7 +36048,8 @@
 	  controller: controller
 	};
 	
-	// controller.$inject = ['projectService'];
+	
+	controller.$inject = ['projectService'];
 	
 	function controller() {
 	  this.styles = _portfolio4.default;
@@ -36065,7 +36067,7 @@
 /* 48 */
 /***/ function(module, exports) {
 
-	module.exports = "<section ng-class=\"$ctrl.styles.portfolio\">\n  <h1>Portfolio</h1>\n\n  <new-project add=\"$ctrl.add\"></new-project>\n\n  <lunch></lunch>\n  <chore></chore>\n  <bus-mall></bus-mall>\n</section>";
+	module.exports = "<section ng-class=\"$ctrl.styles.portfolio\">\n  <h1>Portfolio</h1>\n\n  <!--<new-project add=\"$ctrl.add\"></new-project>-->\n\n  <lunch></lunch>\n  <chore></chore>\n  <bus-mall></bus-mall>\n</section>";
 
 /***/ },
 /* 49 */
@@ -36102,7 +36104,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._3G0iI5seyNOgIcCTxR8mAd {\n  background-image: url(\"https://cdn.shutterstock.com/shutterstock/videos/13808399/thumb/7.jpg\");\n  background-attachment: fixed;\n  background-size: cover;\n  background-repeat: no-repeat;\n  color: white; }\n  ._3G0iI5seyNOgIcCTxR8mAd img {\n    width: 50%;\n    max-height: 35%;\n    display: block;\n    margin: 1% auto;\n    border: 3px inset white; }\n  ._3G0iI5seyNOgIcCTxR8mAd h3 {\n    margin-bottom: 0; }\n  ._3G0iI5seyNOgIcCTxR8mAd a {\n    color: white;\n    margin-top: 1%;\n    font-style: italic; }\n  ._3G0iI5seyNOgIcCTxR8mAd div {\n    height: 450px;\n    vertical-align: top;\n    width: 30%;\n    border: 5px outset grey;\n    display: inline-block;\n    overflow: auto; }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/components/portfolio/src/components/portfolio/portfolio.scss"],"names":[],"mappings":"AAAA;EAEE,+FAA8F;EAC9F,6BAA4B;EAC5B,uBAAsB;EACtB,6BAA4B;EAE5B,aAAY,EA6Bb;EApCD;IAUI,WAAU;IACV,gBAAe;IACf,eAAc;IACd,gBAAe;IACf,wBAAuB,EACxB;EAfH;IAkBI,iBAAgB,EACjB;EAnBH;IAsBI,aAAY;IACZ,eAAc;IACd,mBAAkB,EACnB;EAzBH;IA4BI,cAAa;IACb,oBAAmB;IACnB,WAAU;IACV,wBAAuB;IACvB,sBAAqB;IACrB,eAAc,EACf","file":"portfolio.scss","sourcesContent":[":local(.portfolio) {\n\n  background-image: url(\"https://cdn.shutterstock.com/shutterstock/videos/13808399/thumb/7.jpg\");\n  background-attachment: fixed;\n  background-size: cover;\n  background-repeat: no-repeat;\n\n  color: white;\n\n  img {\n    width: 50%;\n    max-height: 35%;\n    display: block;\n    margin: 1% auto;\n    border: 3px inset white;\n  }\n\n  h3 {\n    margin-bottom: 0;\n  }\n\n  a {\n    color: white;\n    margin-top: 1%;\n    font-style: italic;\n  }\n\n  div {\n    height: 450px;\n    vertical-align: top;\n    width: 30%;\n    border: 5px outset grey;\n    display: inline-block;\n    overflow: auto;\n  }\n\n}"],"sourceRoot":""}]);
+	exports.push([module.id, "._3G0iI5seyNOgIcCTxR8mAd {\n  background-image: url(\"https://cdn.shutterstock.com/shutterstock/videos/13808399/thumb/7.jpg\");\n  background-attachment: fixed;\n  background-size: cover;\n  background-repeat: no-repeat;\n  color: white; }\n  ._3G0iI5seyNOgIcCTxR8mAd img {\n    width: 50%;\n    max-height: 35%;\n    display: block;\n    margin: 1% auto;\n    border: 3px inset white; }\n  ._3G0iI5seyNOgIcCTxR8mAd h3 {\n    margin-bottom: 0; }\n  ._3G0iI5seyNOgIcCTxR8mAd a {\n    color: white;\n    margin-top: 1%;\n    font-style: italic; }\n  ._3G0iI5seyNOgIcCTxR8mAd div {\n    height: 450px;\n    vertical-align: top;\n    width: 30%;\n    border: 5px outset grey;\n    display: inline-block;\n    overflow: auto; }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/components/portfolio/src/components/portfolio/portfolio.scss"],"names":[],"mappings":"AAAA;EAEE,+FAA8F;EAC9F,6BAA4B;EAC5B,uBAAsB;EACtB,6BAA4B;EAE5B,aAAY,EA0Cb;EAjDD;IAUI,WAAU;IACV,gBAAe;IACf,eAAc;IACd,gBAAe;IACf,wBAAuB,EACxB;EAfH;IAkBI,iBAAgB,EACjB;EAnBH;IAsBI,aAAY;IACZ,eAAc;IACd,mBAAkB,EACnB;EAzBH;IA4BI,cAAa;IACb,oBAAmB;IACnB,WAAU;IACV,wBAAuB;IACvB,sBAAqB;IACrB,eAAc,EACf","file":"portfolio.scss","sourcesContent":[":local(.portfolio) {\n\n  background-image: url(\"https://cdn.shutterstock.com/shutterstock/videos/13808399/thumb/7.jpg\");\n  background-attachment: fixed;\n  background-size: cover;\n  background-repeat: no-repeat;\n\n  color: white;\n\n  img {\n    width: 50%;\n    max-height: 35%;\n    display: block;\n    margin: 1% auto;\n    border: 3px inset white;\n  }\n\n  h3 {\n    margin-bottom: 0;\n  }\n\n  a {\n    color: white;\n    margin-top: 1%;\n    font-style: italic;\n  }\n\n  div {\n    height: 450px;\n    vertical-align: top;\n    width: 30%;\n    border: 5px outset grey;\n    display: inline-block;\n    overflow: auto;\n  }\n\n//   @media screen and (min-resolution: 3dppx) {\n\n//     section {\n//       overflow-x: scroll;\n//       overflow-y: hidden;\n//     }\n\n//     div {\n//       white-space: nowrap;\n//     }\n\n//   }\n\n}"],"sourceRoot":""}]);
 	
 	// exports
 	exports.locals = {
@@ -36192,10 +36194,93 @@
 /* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _angular = __webpack_require__(2);
+	
+	var _angular2 = _interopRequireDefault(_angular);
+	
+	var _camelcase = __webpack_require__(5);
+	
+	var _camelcase2 = _interopRequireDefault(_camelcase);
+	
+	var _path = __webpack_require__(6);
+	
+	var _path2 = _interopRequireDefault(_path);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var context = __webpack_require__(56);
+	
+	var _module = _angular2.default.module('services', []);
+	
+	context.keys().forEach(function (key) {
+	  var name = (0, _camelcase2.default)(_path2.default.basename(key, '.js'));
+	  _module.factory(name, context(key).default);
+	});
+	
+	exports.default = _module.name;
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./project-service.js": 57
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 56;
+
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = projectService;
+	projectService.$inject = ['$http', 'apiUrl'];
+	
+	function projectService($http, apiUrl) {
+	  return {
+	    getAll: function getAll() {
+	      return $http.get(apiUrl + '/projects').then(function (res) {
+	        return res.data;
+	      });
+	    },
+	    add: function add(project) {
+	      return $http.post(apiURl + '/projects', project).then(function (res) {
+	        return res.data;
+	      });
+	    }
+	  };
+	}
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(56);
+	var content = __webpack_require__(59);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(16)(content, {});
@@ -36215,7 +36300,7 @@
 	}
 
 /***/ },
-/* 56 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(15)();
@@ -36223,7 +36308,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body {\n  margin: 0;\n  text-align: center;\n  font-family: 'Russo One', sans-serif; }\n\nh1 {\n  font-size: 3em;\n  margin: 0 auto; }\n\nh2 {\n  font-size: 2em;\n  margin-top: 0;\n  margin-bottom: 1%; }\n\np, li {\n  font-size: 1.5em;\n  text-align: center;\n  font-family: 'Ubuntu', sans-serif; }\n\nsection {\n  display: table-cell;\n  vertical-align: middle;\n  margin: auto;\n  height: 100vh;\n  width: 100vw; }\n\ndiv {\n  width: 60%;\n  margin: auto; }\n\nnav {\n  position: fixed;\n  width: 100%;\n  margin-top: 0.3%; }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/scss/src/scss/main.scss"],"names":[],"mappings":"AAAA;EACE,UAAS;EACT,mBAAkB;EAClB,qCAAoC,EACrC;;AAED;EACE,eAAc;EACd,eAAc,EACf;;AAED;EACE,eAAc;EACd,cAAa;EACb,kBAAiB,EAClB;;AAED;EACE,iBAAgB;EAChB,mBAAkB;EAClB,kCAAiC,EAClC;;AAED;EACE,oBAAmB;EACnB,uBAAsB;EACtB,aAAY;EACZ,cAAa;EACb,aAAY,EACb;;AAED;EACE,WAAU;EACV,aAAY,EACb;;AAED;EACE,gBAAe;EACf,YAAW;EACX,iBAAgB,EACjB","file":"main.scss","sourcesContent":["body {\n  margin: 0;\n  text-align: center;\n  font-family: 'Russo One', sans-serif;\n}\n\nh1 {\n  font-size: 3em;\n  margin: 0 auto;\n}\n\nh2 {\n  font-size: 2em;\n  margin-top: 0;\n  margin-bottom: 1%;\n}\n\np, li {\n  font-size: 1.5em;\n  text-align: center;\n  font-family: 'Ubuntu', sans-serif;\n}\n\nsection {\n  display: table-cell;\n  vertical-align: middle;\n  margin: auto;\n  height: 100vh;\n  width: 100vw;\n}\n\ndiv {\n  width: 60%;\n  margin: auto;\n}\n\nnav {\n  position: fixed;\n  width: 100%;\n  margin-top: 0.3%;\n}\n"],"sourceRoot":""}]);
+	exports.push([module.id, "body {\n  margin: 0;\n  text-align: center;\n  font-family: 'Russo One', sans-serif; }\n\nh1 {\n  font-size: 3em;\n  margin: 0 auto; }\n\nh2 {\n  font-size: 2em;\n  margin-top: 0;\n  margin-bottom: 1%; }\n\np, li {\n  font-size: 1.5em;\n  text-align: center;\n  font-family: 'Ubuntu', sans-serif; }\n\nsection {\n  display: table-cell;\n  vertical-align: middle;\n  margin: auto;\n  height: 100vh;\n  width: 100vw; }\n\ndiv {\n  width: 60%;\n  margin: auto; }\n\nnav {\n  position: fixed;\n  width: 100%;\n  margin-top: 0.3%; }\n\n@media screen and (min-resolution: 3dppx) {\n  div {\n    font-size: 150%; } }\n", "", {"version":3,"sources":["/home/tsmith/projects/portfolio/portfolio-app/src/scss/src/scss/main.scss"],"names":[],"mappings":"AAAA;EACE,UAAS;EACT,mBAAkB;EAClB,qCAAoC,EACrC;;AAED;EACE,eAAc;EACd,eAAc,EACf;;AAED;EACE,eAAc;EACd,cAAa;EACb,kBAAiB,EAClB;;AAED;EACE,iBAAgB;EAChB,mBAAkB;EAClB,kCAAiC,EAClC;;AAED;EACE,oBAAmB;EACnB,uBAAsB;EACtB,aAAY;EACZ,cAAa;EACb,aAAY,EACb;;AAED;EACE,WAAU;EACV,aAAY,EACb;;AAED;EACE,gBAAe;EACf,YAAW;EACX,iBAAgB,EACjB;;AAED;EACE;IACE,gBAAe,EAChB,EAAA","file":"main.scss","sourcesContent":["body {\n  margin: 0;\n  text-align: center;\n  font-family: 'Russo One', sans-serif;\n}\n\nh1 {\n  font-size: 3em;\n  margin: 0 auto;\n}\n\nh2 {\n  font-size: 2em;\n  margin-top: 0;\n  margin-bottom: 1%;\n}\n\np, li {\n  font-size: 1.5em;\n  text-align: center;\n  font-family: 'Ubuntu', sans-serif;\n}\n\nsection {\n  display: table-cell;\n  vertical-align: middle;\n  margin: auto;\n  height: 100vh;\n  width: 100vw;\n}\n\ndiv {\n  width: 60%;\n  margin: auto;\n}\n\nnav {\n  position: fixed;\n  width: 100%;\n  margin-top: 0.3%;\n}\n\n@media screen and (min-resolution: 3dppx) {\n  div {\n    font-size: 150%;\n  }\n\n}"],"sourceRoot":""}]);
 	
 	// exports
 
